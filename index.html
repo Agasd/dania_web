@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dánia</title>
+    <script type="text/javascript" src="modernizr.custom.79639.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquerymigrate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery.swatchbook.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="stellar.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-expand-md">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="navbar-brand">Tanulj Dániában</a>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#slide2">Dániáról</a></li>
+                    <li class="nav-item"><a href="#slide4">Iskolák</a></li>
+                </ul>
+                <ul class="navbar-nav right-nav">
+                    <li class="nav-item"><a href="#slide2">Rólunk</a></li>
+                    <li class="nav-item"><a href="#slide4">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+
+        <article class="row slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5"> </article>
+
+        <article class="row slide" id="slide2" data-slide="2">
+            <div class="col-sm-6 center-block text-center">
+              <h2>Dániáról</h2>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus condimentum enim et tellus sodales egestas. Ut suscipit egestas scelerisque. Maecenas molestie, lorem id ultricies convallis,
+                    augue nunc congue nunc, id dapibus magna ipsum vel metus. Vestibulum lacinia diam eros, vitae vehicula nisi faucibus id. Vivamus luctus elit ac nulla tempor, ac hendrerit justo dictum.
+                    Duis imperdiet, ligula ut tempor aliquam, libero ex sodales erat, ut tempor neque nulla sit amet nisi. Nunc tempus turpis eu mattis rhoncus. Nunc felis leo, pulvinar non sem in, consectetur
+                    cursus metus. In dapibus ipsum pellentesque diam suscipit, ac tincidunt risus laoreet. Nullam vitae sodales nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                    ubilia Curae; Cras imperdiet odio nunc, sit amet dictum dolor pharetra id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sodales nulla.
+                </p>
+            </div>
+        </article>
+        <article class="row  slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5"></article>
+        <article class="row  slide" id="slide4" data-slide="4">
+            <div id="uni" class="col-md-4 center-block text-center">
+               <h2>Egyetemek</h2>
+                <div id="sb-container" class="sb-container">
+                    <div class="swatchDiv" id="ucn">
+                    </div>
+                    <div class="swatchDiv" id="aarhus">
+                    </div>
+                    <div class="swatchDiv" id="cop">
+                    </div>
+                    <div class="swatchDiv" id="aau">
+                    </div>
+                    <div class="swatchDiv" id="titleCard">
+                    </div>
+                </div>
+            </div>
+            <div id="uni_data" class="col-md-7">
+                <h2 id="uni_title">Tanulj Dániában</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum facilisis metus, eu mattis orci ultrices sed. Suspendisse eu est feugiat, luctus elit sed, mollis erat. Proin efficitur et nulla vel lacinia. Phasellus ac libero non mauris molestie scelerisque sed non dui. Sed in sapien malesuada, scelerisque mauris eu, tincidunt elit. Vivamus sed ligula nec tellus fermentum euismod nec ut tellus. Nulla venenatis orci vitae lectus luctus rhoncus.
+                </p>
+                <p>
+                    Quisque vehicula lectus et justo vulputate, at consectetur ipsum malesuada. Fusce eu gravida ligula. Nullam at ligula et nisl dictum varius. Mauris turpis lectus, bibendum sed lacinia id, varius sed nisi. Duis at convallis metus, a malesuada nulla. Suspendisse semper sem eget enim semper ullamcorper. In viverra tempor lacus, id feugiat nisl hendrerit sit amet. Pellentesque lobortis eleifend ante, ut fermentum urna varius vitae. Donec et purus dignissim, scelerisque turpis consequat, vestibulum nibh. Integer sagittis ac orci nec dapibus. Quisque id ultrices libero. Morbi pulvinar vitae arcu sit amet feugiat. Nullam mattis ex id nulla consequat pharetra.
+                </p>
+                <img id="uni_container" src="images/schools/generic.jpg"/>
+
+            </div>
+        </article>
+        <article class="row  slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
+
+        </article>
+
+    </main>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#sb-container').swatchbook({
+                openAt: 4
+            });
+            if(!Modernizr.touch) {
+                $(window).stellar();
+            }
+            var links = $('.navigation').find('li');
+            slide = $('.slide');
+            mywindow = $(window);
+            htmlbody = $('html,body');
+
+            var data ={
+                ucn: {title: "University College of Nordjylland", image: "ucn.jpg"},
+                aarhus: {title: "Aarhus University", image:"aarhus.jpg"},
+                cop: {title: "University of Copenhagen", image:"cop.jpg"},
+                aau: {title: "Aalborg University", image:"aau.jpg"},
+                titleCard: {title: "Tanulj Dániában", image:"generic.jpg"}
+        };
+
+            $( ".swatchDiv" ).each(function( index ) {
+                $(this).click(function() {
+                $( ".swatchDiv" ).each(function( index ) {
+                    if($(this).hasClass('ff-active')){
+                        var  id = $( this ).attr('id');
+                        $('#uni_container').attr('src','images/schools/'+data[id].image);
+                        $('#uni_title').text(data[id].title);
+                    }
+                });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
